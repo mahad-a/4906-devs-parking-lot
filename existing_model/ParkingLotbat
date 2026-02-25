@@ -1,0 +1,4 @@
+cd /D "C:\eclipse\CD++Builder Example Workspace\Student\ParkingLot"
+"C:/eclipse/CD++Builder Example Workspace/Student/ParkingLot/simu.exe"  -m"ParkingLot.ma" -e"ParkingLot.EV" -o"ParkingLotOUT_12.out" -l"ParkingLotLOG_12.log" -t"00:00:50:000" 
+rem 
+pause

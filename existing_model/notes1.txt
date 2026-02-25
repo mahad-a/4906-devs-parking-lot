@@ -1,0 +1,8 @@
+Date: 5/2/2016
+
+Name: ParkingLot 
+
+Version 1 
+
+
+You can run the simulation for 50 seconds to see the results.

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Models>
+	<Model name="ParkingLot" type="coupled" description="A coupled model for a parking lot">
+		<Inputs>
+			<Port name="in" type="int" description="A car entering the parking lot"/>
+			...
+		</Inputs>
+		<Outputs>
+			<Port name="out" type="int" description="A car leaving the parking lot"/>
+			...
+		</Outputs>
+		<Files>
+			<File name="ParkingLot.ma" type="MA" location=""/>
+			<File name="ParkingLot.ev" type="EV" location=""/>
+			...
+		</Files>
+	</Model>
+	<Model name="AccessControl" type="Atomic" description="An atomic model for an entrance gate">
+		<Inputs>
+			<Port name="in" type="int" description="A car entering the gate"/>
+			...
+		</Inputs>
+		<Outputs>
+			<Port name="out" type="int" description="A car entering the parking lot"/>
+			...
+		</Outputs>
+		<Files>
+			<File name="AccessControlType.h" type="H" location=""/>
+			<File name="AccessControl.cpp" type="CPP" location=""/>
+	</Model>
+	<Model name="Screen" type="Atomic" description="An atomic model for a screen showing available spaces">
+		<Inputs>
+			<Port name="in" type="int" description="A car looking at the screen"/>
+			...
+		</Inputs>
+		<Outputs>
+			<Port name="out" type="int" description="A car going for the available space"/>
+			...
+		</Outputs>
+		<Files>
+			<File name="ScreenType.h" type="H" location=""/>
+			<File name="Screen.cpp" type="CPP" location=""/>
+	</Model>
+			<Model name="Sensor1" type="Atomic" description="An atomic model for a sensor detecting a parked car">
+		<Inputs>
+			<Port name="in" type="int" description="A car parking in that space"/>
+			...
+		</Inputs>
+		<Outputs>
+			<Port name="out" type="int" description="A car leaving that parking space"/>
+			...
+		</Outputs>
+		<Files>
+			<File name="Sensor1Type.h" type="H" location=""/>
+			<File name="Sensor1Type.cpp" type="CPP" location=""/>
+</Models>
