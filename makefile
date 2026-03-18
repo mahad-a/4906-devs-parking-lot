@@ -1,8 +1,7 @@
 CC=g++
 CFLAGS=-std=c++17
 
-# cadmium_v2 is a sibling directory of devs-assignment1/
-INCLUDECADMIUM=-I ../cadmium_v2/include
+INCLUDECADMIUM=-I /home/cadmium/rt_cadmium/include
 
 #CREATE BIN, BUILD AND RESULTS FOLDERS DURING BUILD
 bin_folder     := $(shell mkdir -p bin)
