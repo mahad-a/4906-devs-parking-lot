@@ -1,7 +1,7 @@
 CC=g++
 CFLAGS=-std=c++17
 
-INCLUDECADMIUM=-I /home/cadmium/rt_cadmium/include
+INCLUDECADMIUM=-I $(CADMIUM)
 
 #CREATE BIN, BUILD AND RESULTS FOLDERS DURING BUILD
 bin_folder     := $(shell mkdir -p bin)
