@@ -81,6 +81,16 @@ Binaries go into `bin/`, object files into `build/`, and CSV logs into `simulati
 │   └── side_b_test.txt
 ├── makefile
 ├── README.md
+├── scripts
+│   ├── run_all_tests.sh
+│   ├── run_access_control_a_test.sh
+│   ├── run_access_control_b_test.sh
+│   ├── run_screen_test.sh
+│   ├── run_side_a_test.sh
+│   ├── run_side_b_test.sh
+│   ├── run_parking_lot_test.sh
+│   ├── run_full_system_test.sh
+│   └── run_simulator.sh
 ├── simulation_results
 │   ├── access_control_a_test.csv
 │   ├── access_control_b_test.csv
@@ -145,10 +155,36 @@ Tests the full hierarchy end-to-end.
 |---|---|---|---|---|
 | `FULL_SYSTEM_TEST` | `full_system_test.txt` | Entrance gate → lot → exit gate | t=1, 20, 40 | t=14, 33, 53 |
 
-To run any test:
+To run any test manually:
 ```
 bin/<BINARY_NAME> input_data/<input_file>
 ```
+
+### Running tests via scripts
+
+Scripts are in `scripts/`. Make them executable once:
+```
+chmod +x scripts/*.sh
+```
+
+Then run individual tests:
+```
+scripts/run_access_control_a_test.sh
+scripts/run_access_control_b_test.sh
+scripts/run_screen_test.sh
+scripts/run_side_a_test.sh
+scripts/run_side_b_test.sh
+scripts/run_parking_lot_test.sh
+scripts/run_full_system_test.sh
+scripts/run_simulator.sh
+```
+
+Or run all tests at once:
+```
+scripts/run_all_tests.sh
+```
+
+`run_all_tests.sh` builds each target, runs it, and prints a pass/fail summary at the end. It exits with a non-zero code if any test fails.
 
 ---
 
