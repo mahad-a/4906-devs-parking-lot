@@ -85,6 +85,15 @@ tests: atomic_tests coupled_tests integration_test
 #DEFAULT TARGET — builds everything
 all: simulator tests
 
+#RUN TARGETS
+runalltests: all
+	./scripts/run_all_tests.sh
+
+runsimulator: simulator
+	./scripts/run_simulator.sh
+
 #CLEAN COMMANDS
 clean:
 	rm -f bin/* build/*
+
+.PHONY: all simulator tests atomic_tests coupled_tests integration_test runalltests runsimulator clean
