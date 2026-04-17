@@ -10,6 +10,7 @@ A discrete-event simulation of a parking lot. Cars arrive at an entrance gate, g
 ## Building
 
 ```
+./build_sim.sh
 make all              # build simulator + all 7 tests
 make simulator        # build only bin/PARKING_SYSTEM_TEST
 make atomic_tests     # build ACCESS_CONTROL_A/B_TEST + SCREEN_TEST
