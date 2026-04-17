@@ -14,4 +14,5 @@ mkdir -p bin
 mkdir -p simulation_results
 make clean
 make all
+make runalltests
 echo "Compilation done. Executables in the bin folder"
